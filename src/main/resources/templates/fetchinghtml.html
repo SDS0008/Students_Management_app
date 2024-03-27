@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        /* Color alternates rows */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h2>Employee Data</h2>
+    <form action="/FETCH" method="post">
+        <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email ID</th>
+                <th>Employee ID</th>
+                <th>Contact</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Iterate over a collection of DE objects -->
+            <tr th:each="DE : ${tcscompany}">
+                <td th:text="${DE.first_name}"></td>
+                <td th:text="${DE.last_name}"></td>
+                <td th:text="${DE.email_id}"></td>
+                <td th:text="${DE.emp_id}"></td>
+                <td th:text="${DE.contact}"></td>
+            </tr>
+            </tbody>
+        </table>
+       
+    </form>
+</body>
+</html>

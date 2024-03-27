@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            color: #333;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Update Employee Data</h2>
+    <form action="update" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="first_name" value=""><br><br>
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="last_name" value=""><br><br>
+        
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email_id" value=""><br><br>
+        
+        <label for="empId">Employee ID:</label>
+        <input type="text" id="empId" name="emp_id" value=""><br><br>
+        
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" value=""><br><br>
+        
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
